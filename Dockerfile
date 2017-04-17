@@ -11,3 +11,6 @@ RUN set -xe && \
     docker-php-ext-install pdo_mysql mysqli mcrypt opcache && \
     docker-php-ext-install -j${NPROC} gd && \
     apk del .backend-deps
+
+RUN set -xe && \
+    apk add --update zeromq zeromq-dev
